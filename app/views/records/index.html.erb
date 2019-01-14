@@ -1,2 +1,11 @@
-<h1>Records#index</h1>
-<p>Find me in app/views/records/index.html.erb</p>
+<h1> My Records </h1>
+
+<ul>
+    <% @records.each do |r| %>
+        <li>
+            <strong> <%= r.artist %> </strong>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Add New Record", new_user_record_path %>
