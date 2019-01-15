@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+ /* font-family: 'Monoton', cursive; */
+.nav {
+    color: white;
+}
+ .nav-link {
+     color: white;
+ }
+
+ .nav-link:hover {
+     color: grey;
+ }
+.title {
+    font-family: 'Monoton', cursive;
+    font-size: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top: 10%;
+    left: 24%;
+    z-index:1;
+    color: white;
+}
+
+.addback {
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://marqueemag.com/wp-content/uploads/2016/04/Record-Store-Day-Wax-Trax-04.16.2016-Rae-10.jpg")
+}
