@@ -1,5 +1,15 @@
 <h1>Add a new record!</h1>
+<div class="container-fluid">
+<div class="col-6">
 
+<%= form_tag(new_user_record_path(current_user), :method => 'get') do %>
+    <%= label_tag "Serach for a Record:" %>
+    <%= search_field_tag "record" %>
+    <%= submit_tag "Submit" %>
+<% end %>
+</div>
+
+<div class="col-6">
 <%= form_for [:user, @record] do |f| %>
 
     <div>
@@ -30,5 +40,14 @@
     <%= f.submit "Add new Record" %>
 
 <% end %>
+</div>
+</div>
+
+<% if @search %>
+    <% @search.results.each do |r| %>
+        <p><img src="<%= r.cover_image %>"></p>
+    <% end %>
+<% end %>
+
 
 <%= link_to "Back to the list!", user_records_path %>
