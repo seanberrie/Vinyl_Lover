@@ -1,25 +1,23 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:new]
+  before_action :set_user
 
   def index
     wrapper = Discogs::Wrapper.new("vinyl_lover")
     @artist = wrapper.get_artist("329937")
     @records = Record.all
-    set_user
   end
 
   def show
-    set_user
-    set_record
   end
 
   def new
     if params[:record]
-      my_user_token =  "AxCDUtaVuGeHArZSoTuyajiQOaLCzaBTMotVunKv"
-      # ENV["USERTOKEN"]
+      my_user_token =  ENV["user_token"]
       auth_wrapper = Discogs::Wrapper.new("vinyl_lover", user_token: my_user_token)
-      @search = auth_wrapper.search(params[:record], :per_page => 10, :type => :artist)
+      
+      @search = auth_wrapper.search(params[:record], :per_page => 30)
+      binding.pry
       @record = Record.new
     else
       @record = Record.new
@@ -27,7 +25,7 @@ class RecordsController < ApplicationController
   end
   
   def create
-    set_user
+    
     @record = @user.records.create(record_params)
         if @record.save
             redirect_to user_records_path
@@ -37,14 +35,9 @@ class RecordsController < ApplicationController
   end
 
   def edit
-    set_user
-    set_record
   end
 
   def update
-    set_user
-    set_record
-
     if @record.update_attributes(record_params)
       redirect_to user_records_path
     else
@@ -53,8 +46,6 @@ class RecordsController < ApplicationController
   end
 
   def destroy
-    set_user
-    set_record
     @record.destroy
     redirect_to user_records_path
   end

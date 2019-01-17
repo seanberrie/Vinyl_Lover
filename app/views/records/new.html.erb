@@ -45,7 +45,11 @@
 
 <% if @search %>
     <% @search.results.each do |r| %>
-        <p><img src="<%= r.cover_image %>"></p>
+        <p><img src="<%= r.thumb %>"></p>
+        <p><%= r.title %></p>
+        <p><%= r.year %></p>
+        <p><%= r.artist %></p>
+        
     <% end %>
 <% end %>
 
