@@ -15,9 +15,7 @@ class RecordsController < ApplicationController
     if params[:record]
       my_user_token =  ENV["user_token"]
       auth_wrapper = Discogs::Wrapper.new("vinyl_lover", user_token: my_user_token)
-      
       @search = auth_wrapper.search(params[:record], :per_page => 30)
-      binding.pry
       @record = Record.new
     else
       @record = Record.new
