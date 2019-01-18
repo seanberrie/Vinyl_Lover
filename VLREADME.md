@@ -40,10 +40,6 @@ A full stack application that allows customers make a list of records they own a
 ### Edit Record
 ![edit record](https://i.imgur.com/ohmKT8Z.png)
 
-### ERD
-![ERD](https://i.imgur.com/vr5sHmE.png)
-
-
 ### Features
 
 * Search feature from API
