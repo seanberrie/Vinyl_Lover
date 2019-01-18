@@ -3,8 +3,6 @@ class RecordsController < ApplicationController
   before_action :set_user
 
   def index
-    wrapper = Discogs::Wrapper.new("vinyl_lover")
-    @artist = wrapper.get_artist("329937")
     @records = Record.all
   end
 
@@ -23,13 +21,22 @@ class RecordsController < ApplicationController
   end
   
   def create
-    
-    @record = @user.records.create(record_params)
-        if @record.save
-            redirect_to user_records_path
-        else
-            render :new
-        end
+    if params[:api_record]
+        object = Rack::Utils.parse_nested_query params[:api_record]
+        @record  = Record.new
+        @record.image = object["cover_image"]
+        @record.year = object["year"]
+        @record.artist = object["title"]
+        @user.records.new(record_params)
+        render :new
+    else 
+      @record = @user.records.new(record_params)
+      if @record.save
+        redirect_to user_records_path
+      else
+        render :new
+      end
+    end
   end
 
   def edit

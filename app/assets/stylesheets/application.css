@@ -42,3 +42,7 @@
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://marqueemag.com/wp-content/uploads/2016/04/Record-Store-Day-Wax-Trax-04.16.2016-Rae-10.jpg")
 }
+
+.search {
+    border: 1px black solid;
+}

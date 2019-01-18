@@ -9,12 +9,8 @@
 <h2>Want</h2>
     <% @user.records.each do |r| %>
         <% if r.own === false %>
-            <p><%= r.artist %>  - <%= r.album %> - <%= r.year %> - <%= r.image %> - <%= link_to "edit", edit_user_record_path(@user.id, r.id) %>
+            <p><%= r.artist %>  - <%= r.album %> - <%= r.year %> - <img src="<%= r.image %>"> - <%= link_to "edit", edit_user_record_path(@user.id, r.id) %>
         <% end %>
     <% end %>
-
-    <p><%= @artist.name %></p>
-
-
 <p><%= link_to "Add New Record", new_user_record_path %></p>
 </div>
