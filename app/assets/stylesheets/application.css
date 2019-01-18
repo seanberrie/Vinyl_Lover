@@ -21,13 +21,19 @@ body {
  h1 {
     text-align: center;
 }
+.newform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
  h2 {
     text-align: center;
     text-decoration: underline;
 }
 .newrec {
-    margin: 20px;
+     margin: 20px;
     height: 350px;
     width: 350px;
     display: flex;
