@@ -46,6 +46,8 @@ A full stack application that allows customers make a list of records they own a
   ![signup code snippet](https://i.imgur.com/OdRcpdi.png)
 * view 2 list one that has the value of owned and one of want from 1 model
  ![2 views one model](https://i.imgur.com/khBmVJR.png)
+ * parsing data from the API and changing the keys to match my model ![snippet](https://i.imgur.com/rfpabdu.png)
+ * connecting to the API via hidden key ![snippet](https://i.imgur.com/BthECGZ.png)
 
 ### Credits
 
