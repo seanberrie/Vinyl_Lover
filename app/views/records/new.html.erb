@@ -44,6 +44,11 @@
         <p><img src="<%= r.thumb %>"></p>
         <p><%= r.title %></p>
         <p><%= r.year   %></p>
+        <div class="hideown">
+        <%= f.label :own %>
+        <%= f.check_box :own %>
+        </div>
+
         <%= hidden_field_tag :api_record, r.to_param %>
         <%= f.submit "Add new Record", class: 'btn btn-primary'%>
         </div>  

@@ -46,6 +46,9 @@ body {
  .nav-link:hover {
      color: grey;
  }
+ .hideown {
+     display: none;
+ }
 .title {
     font-family: 'Monoton', cursive;
     font-size: 75px;
