@@ -1,5 +1,5 @@
 <%= video_tag "vinyl.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
-<div class="form2">
+<div class="form2 newrec">
     <h1>Edit Account</h1>
     <%= form_for @user do |f| %>  
       <div class="form-group">
@@ -23,6 +23,6 @@
       </div>
 
       <%= f.submit 'Edit Account', class: 'btn btn-primary' %>
-    <% end %>
-    <%= link_to "Delete Account", { action: :destroy, id: @user.id }, method: :delete, data: { confirm: "Are you sure you want to delete your account"} %>
+      <p><%= link_to "Delete Account", { action: :destroy, id: @user.id }, method: :delete, data: { confirm: "Are you sure you want to delete your account"}, class: 'btn btn-primary' %></p>
+      <% end %>
   </div>

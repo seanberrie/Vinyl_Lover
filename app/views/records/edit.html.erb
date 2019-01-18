@@ -1,4 +1,5 @@
-
+<%= video_tag "vinyl.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
+<div class="editrec">
 <h1>Edit this record!</h1>
 
 <%= form_for [@user, @record] do |f| %>
@@ -28,8 +29,8 @@
         <%= f.check_box :own %>
     </div>
 
-    <%= f.submit "Edit Record" %>
+    <%= f.submit "Edit Record", class: 'btn btn-primary' %>
 
 <% end %>
-<%= link_to "Delete this record!", { action: :destroy, id: @record.id }, method: :delete, data: { confirm: "Are you sure you want to get rid of this record?"} %>
-<%= link_to "Back to the list!", user_records_path %>
+<%= link_to "Delete this record!", { action: :destroy, id: @record.id }, method: :delete, data: { confirm: "Are you sure you want to get rid of this record?"}, class: 'btn btn-primary'%>
+</div>

@@ -1,13 +1,16 @@
 <ul class="nav navbar-dark bg-dark">
+<% if logged_in? %>
   <li class="nav-item">
-    <%= link_to 'Home', root_path, class: 'nav-link' %>
+    <%= link_to 'Home', user_records_path(current_user), class: 'nav-link' %>
   </li>
-  <% if logged_in? %>
   <li class="nav-item">
     <a class="nav-link disabled">Logged In As: <%= current_user.username %> </a>
   </li>
   <li class="nav-item">
-    <%= link_to 'Edit Account', edit_user_path(@user.id), class: 'nav-link' %>
+  <%= link_to 'Add New Record', new_user_record_path(current_user), class: 'nav-link' %>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Edit Account', edit_user_path(current_user), class: 'nav-link' %>
   </li>
   <li class="nav-item">
     <%= link_to 'Log Out', logout_path, method: 'delete', class: 'nav-link' %>

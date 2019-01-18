@@ -14,7 +14,29 @@
  *= require_self
  */
  /* font-family: 'Monoton', cursive; */
-.nav {
+ /* font-family: 'Roboto', sans-serif; */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+ h1 {
+    text-align: center;
+}
+
+ h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+.newrec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    background-color: black;
+    border-color: black;
+}
+ .nav {
     color: white;
 }
  .nav-link {
@@ -39,10 +61,25 @@
 }
 
 .addback {
+    height: 1500px;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://marqueemag.com/wp-content/uploads/2016/04/Record-Store-Day-Wax-Trax-04.16.2016-Rae-10.jpg")
+}
+.addback2 {
+    height: 5000px;
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://marqueemag.com/wp-content/uploads/2016/04/Record-Store-Day-Wax-Trax-04.16.2016-Rae-10.jpg")
 }
 
 .search {
     border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.img {
+    height: 100px;
+    width: 100px;
 }
