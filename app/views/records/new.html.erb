@@ -41,7 +41,7 @@
     <% @search.results.each do |r| %>
         <%= form_for [:user, @record] do |f| %>
         <div class="search">
-        <p><img src="<%= r.thumb %>"></p>
+        <% if r.thumb != "" %> <img class="img" src="<%= r.thumb %>"> <% end %>
         <p><%= r.title %></p>
         <p><%= r.year   %></p>
         <div class="hideown">

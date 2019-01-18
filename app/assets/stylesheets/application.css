@@ -27,6 +27,9 @@ body {
     text-decoration: underline;
 }
 .newrec {
+    margin: 20px;
+    height: 350px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,7 +78,9 @@ body {
 }
 
 .search {
-    border: 1px black solid;
+    margin: 20px;
+    height: 350px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
