@@ -18,7 +18,11 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+.word {
+    font-family: 'Monoton', cursive
+}
  h1 {
+     font-size: 3em;
     text-align: center;
 }
 .newform {
@@ -28,30 +32,58 @@ body {
     align-items: center;
 
 }
+h1 {
+    margin: 50px;
+}
  h2 {
     text-align: center;
-    text-decoration: underline;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+p {
+    text-align: center;
 }
 .newrec {
      margin: 20px;
     height: 350px;
-    width: 350px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.205), rgba(255, 255, 255, 0.205));
+    border-radius: 25px;
+}
+.newrec:hover {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.294));
+}
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .btn {
     background-color: black;
     border-color: black;
+    margin-top: 20px;
 }
  .nav {
     color: white;
+    display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
 }
  .nav-link {
      color: white;
+     
  }
-
+.nav-title {
+    font-family: 'Monoton', cursive;
+}
  .nav-link:hover {
      color: grey;
  }
@@ -73,14 +105,30 @@ body {
 }
 
 .addback {
-    height: 1500px;
+    z-index: 1;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://marqueemag.com/wp-content/uploads/2016/04/Record-Store-Day-Wax-Trax-04.16.2016-Rae-10.jpg") repeat center !important;
+    background-size: cover;
+    width: 100%;
+    top:40px; bottom: 0px;
+    height: 100%;
+    background-repeat: repeat;
+    position: absolute;
+    overflow-x: scroll;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://marqueemag.com/wp-content/uploads/2016/04/Record-Store-Day-Wax-Trax-04.16.2016-Rae-10.jpg")
 }
 .addback2 {
-    height: 5000px;
+    z-index: 1;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://marqueemag.com/wp-content/uploads/2016/04/Record-Store-Day-Wax-Trax-04.16.2016-Rae-10.jpg") repeat center !important;
+    background-size: cover;
+    width: 100%;
+    top:40px; bottom: 0px;
+    height: 100%;
+    background-repeat: repeat;
+    position: absolute;
+    overflow-x: scroll;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://marqueemag.com/wp-content/uploads/2016/04/Record-Store-Day-Wax-Trax-04.16.2016-Rae-10.jpg")
 }
 
 .search {
@@ -91,9 +139,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.205), rgba(255, 255, 255, 0.205));
+    border-radius: 25px;
 
 }
 .img {
     height: 100px;
     width: 100px;
+}
+.newrecform {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }

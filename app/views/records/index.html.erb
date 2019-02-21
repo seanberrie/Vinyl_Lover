@@ -1,11 +1,11 @@
 <div class="addback">
 <div class= "container">
-<h1> My Records </h1>
-<h2>Own</h2>
-<div class="row">
+<h1 class="word"> My Records </h1>
+<h2 class="word">Own</h2>
+<div class="list">
 <% @user.records.each do |r| %>
     <% if r.own === true %>
-    <div class="col newrec">
+    <div class="newrec">
             <% if r.image != "" %> <img class="img" src="<%= r.image %>"> <% end %>
             <p><%= r.artist %> 
             <p><%= r.album %></p>
@@ -16,11 +16,11 @@
             <% end %>
 </div>
  
-<h2>Want</h2>
-    <div class="row">
+<h2 class="word">Want</h2>
+    <div class="list">
     <% @user.records.each do |r| %>
         <% if r.own === false %>
-        <div class="col newrec">
+        <div class="newrec">
             <% if r.image != "" %> <img class="img" src="<%= r.image %>"> <% end %>
             <p><%= r.artist %> 
             <p><%= r.album %></p>
