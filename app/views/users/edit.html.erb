@@ -1,8 +1,8 @@
 <%= video_tag "vinyl.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
-<div class="form2 newrec">
+<div class=" editrec">
     <h1>Edit Account</h1>
     <%= form_for @user do |f| %>  
-      <div class="form-group">
+      <div>
         <%= f.label :username, 'User-name*' %>
         <%= f.text_field :username, class: 'form-control' %>
       </div>

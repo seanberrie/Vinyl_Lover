@@ -1,7 +1,8 @@
 <%= video_tag "vinyl.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
+<div class="cover">
 <h1 class="title"> Vinyl Lover</h1>
 <div class='form'>
-  <h1>Sign In</h1>
+  <h3>Sign In</h3>
   <%= form_tag sessions_path do %>  
     <div class="form-group">
       <%= label_tag :email, 'Email' %>
@@ -13,4 +14,5 @@
     </div>
   <%= submit_tag 'Log In', class: 'btn btn-primary' %>
   <% end %>
+</div>
 </div>

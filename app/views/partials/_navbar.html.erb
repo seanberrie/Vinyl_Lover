@@ -1,23 +1,30 @@
 <ul class="nav navbar-dark bg-dark">
-<li class="nav-item">
+<% if logged_in? %>
+<div class="nav-flex">
+  <div class="nav-left">
+    <li class="nav-item">
+      <%= link_to 'Vinyl Lover', user_records_path(current_user), class: 'nav-link nav-title' %>
+    </li>
+    <li class="nav-item welcome">
+      <a class="nav-link disabled">Welcome Back <%= current_user.username %> </a>
+    </li>
+    <li class="nav-item">
+    <%= link_to 'Add New Record', new_user_record_path(current_user), class: 'nav-link' %>
+    </li>
+  </div>
+  <div class="nav-right">
+    <li class="nav-item">
+      <%= link_to 'Edit Account', edit_user_path(current_user), class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Log Out', logout_path, method: 'delete', class: 'nav-link' %>
+    </li>
+  </div>
+</div>
+<% else %>
+  <li class="nav-item">
     <%= link_to 'Vinyl Lover', root_path, class: 'nav-link nav-title' %>
   </li>
-<% if logged_in? %>
-<div>
-  <li class="nav-item welcome">
-    <a class="nav-link disabled">Welcome Back <%= current_user.username %> </a>
-  </li>
-</div>
-  <li class="nav-item">
-  <%= link_to 'Add New Record', new_user_record_path(current_user), class: 'nav-link' %>
-  </li>
-  <li class="nav-item">
-    <%= link_to 'Edit Account', edit_user_path(current_user), class: 'nav-link' %>
-  </li>
-  <li class="nav-item">
-    <%= link_to 'Log Out', logout_path, method: 'delete', class: 'nav-link' %>
-  </li>
-  <% else %>
   <li class="nav-item">
     <%= link_to 'Sign Up', new_user_path, class: 'nav-link' %>
   </li>
